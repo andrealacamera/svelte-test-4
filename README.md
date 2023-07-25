@@ -31,7 +31,7 @@ npm create svelte@latest svelte-test-4
   4. Add `/src/routes/+layout.ts` with initialization
   5. Use `$format`, `$_`, or `$t` in pages
 
-- [Iconify](https://iconify.design/)
+- [Iconify](https://iconify.design/) 
 ## Created 2023-07-25 | Modified 2023-07-25
 
 ## References:
