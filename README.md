@@ -23,8 +23,15 @@ npm create svelte@latest svelte-test-4
       }
     },  
   ```
+- [svelte-i18n](https://www.npmjs.com/package/svelte-i18n) See `svelte-text-3`, branch 2, for an example. 
 
+  1. Install with `npm i svelte-i18n`
+  2. Add `$lib/i18n/locales/en.json` and other language(s) 
+  3. Add `$lib/i18n/index.ts` with async loading locales (see the file)
+  4. Add `/src/routes/+layout.ts` with initialization
+  5. Use `$format`, `$_`, or `$t` in pages
 
+- [Iconify](https://iconify.design/)
 ## Created 2023-07-25 | Modified 2023-07-25
 
 ## References:
