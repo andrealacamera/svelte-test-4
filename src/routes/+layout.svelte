@@ -4,8 +4,9 @@
 </script>
 
 <div class="max-w-[1280px] bg-indigo-100 m-auto min-h-screen">
-
+  
   <Header />
+
   <slot />
   
 </div>
