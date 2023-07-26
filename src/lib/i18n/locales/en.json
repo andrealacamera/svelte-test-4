@@ -2,11 +2,15 @@
   "home": {
     "title": "Welcome to the Homepage",
     "head": "Homepage | SVELTE-TEST-4",
-    "description": "TBD"
+    "description": "TBD",
+    "text": "I want to drink {n, plural, =0 {no beers} one {one beer} other {a lot of beers!}}"
   },
   "menu": {
-    
+    "home": "Homepage",
+    "page": "The page"
   },
   "common": {
+    "l_long": "Versione italiana",
+    "l_short": "🇮🇹 Italiano"
   }
 }

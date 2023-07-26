@@ -1,30 +1,44 @@
 <script lang="ts">
   import Icon from '@iconify/svelte';
   import { fly } from 'svelte/transition';
+  import {t, locale, locales} from 'svelte-i18n'
 
 
 
-  let openMenu: boolean = true
+  let openMenu: boolean = false
 
   const toggleMenu = ():void => {
     openMenu = !openMenu
+  }
+
+  const toggleLocale = ():void => {
+    if ($locale === 'it') {
+      locale.set('en')
+    } else {
+      locale.set('it')
+    }
   }
 </script>
 
 
 <header class="flex justify-between p-8">
   <div>
-    <img src = "" alt="SVELTE-TEST-4"/> {openMenu}
+    <img src = "" alt="SVELTE-TEST-4"/> {openMenu} {$locale}
   </div>
-  <nav class="hidden md:flex flex-grow justify-center">
+  <nav class="hidden md:flex flex-grow justify-center gap-4">
     <ul class="flex flex-row gap-4">
-      <li>
-        Home
+      <li class="cursor-pointer">
+        <a href="/">{$t('menu.home')}</a>
       </li>
-      <li>
-        Page
+      <li class="cursor-pointer">
+        <a href="/">{$t('menu.page')}</a>
       </li>
     </ul>
+    <div>
+      <button class="" on:click={toggleLocale} >
+        {$t('common.l_short')}
+      </button>
+    </div>
   </nav>
   <button on:click={toggleMenu} class="inline-flex md:hidden">
     {#if !openMenu}
@@ -40,15 +54,21 @@
           <Icon icon="bi:x" class="w-8 h-8"/>
         </button>
       </section>
-      <nav class="mt-8">
+      <nav class="mt-8 flex flex-col gap-4">
         <ul class="flex flex-col gap-4">
           <li>
-            Home
+            <a href="/">{$t('menu.home')}</a>
           </li>
           <li>
-            Page
+            <a href="/">{$t('menu.page')}</a>
           </li>
         </ul>
+        <div>
+          <button class="" on:click={toggleLocale} >
+            {$t('common.l_long')}
+          </button>
+        </div>
+    
       </nav>
     </div>
   

@@ -2,11 +2,16 @@
   "home": {
     "title": "Benvenuti nella Homepage",
     "head": "Homepage | SVELTE-TEST-4",
-    "description": "TBD"
+    "description": "TBD",
+    "text": "Desidero bere {n, plural, =0 {nessuna birra} one {ona sola birra} other {un sacco di birre!}}"
   },
   "menu": {
-    
+    "home": "Homepage",
+    "page": "La pagina"
   },
   "common": {
+    "l_long": "English version",
+    "l_short": "🇬🇧 English"
+
   }
 }
