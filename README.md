@@ -23,7 +23,7 @@ npm create svelte@latest svelte-test-4
       }
     },  
   ```
-- [svelte-i18n](https://www.npmjs.com/package/svelte-i18n). See `svelte-text-3`, branch 2, for an example. 
+- [svelte-i18n](https://www.npmjs.com/package/svelte-i18n). See [`svelte-test-3`](https://github.com/andrealacamera/svelte-test-3), "test2" branch, for an example. 
 
   1. Install with `npm i svelte-i18n`
   2. Add `$lib/i18n/locales/en.json` and other language(s) 
