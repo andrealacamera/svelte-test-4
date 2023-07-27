@@ -7,7 +7,7 @@ npm create svelte@latest svelte-test-4
 ``` 
 (with these choices: Skeleton project (Svelte-kit)> TypeScript syntax > no additional options)
 
-## Added:
+## Libraries / Add-ons:
 - [TailwindCSS](https://tailwindcss.com/docs/guides/sveltekit) 
 
   Follow the instructions on the page!
@@ -23,15 +23,18 @@ npm create svelte@latest svelte-test-4
       }
     },  
   ```
-- [svelte-i18n](https://www.npmjs.com/package/svelte-i18n) See `svelte-text-3`, branch 2, for an example. 
+- [svelte-i18n](https://www.npmjs.com/package/svelte-i18n). See `svelte-text-3`, branch 2, for an example. 
 
   1. Install with `npm i svelte-i18n`
   2. Add `$lib/i18n/locales/en.json` and other language(s) 
   3. Add `$lib/i18n/index.ts` with async loading locales (see the file)
   4. Add `/src/routes/+layout.ts` with initialization
-  5. Use `$format`, `$_`, or `$t` in pages
+  5. Use `$format`, `$_`, or `$t` in pages. See [message syntax](https://formatjs.io/docs/core-concepts/icu-syntax).
 
 - [Iconify](https://iconify.design/) 
-## Created 2023-07-25 | Modified 2023-07-25
+
+## 1 - Accordion
+
+## Created 2023-07-25 | Modified 2023-07-27
 
 ## References:

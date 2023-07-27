@@ -21,7 +21,7 @@
 </script>
 
 
-<header class="flex justify-between p-8">
+<header class="flex justify-between">
   <div>
     <img src = "" alt="SVELTE-TEST-4"/> {openMenu} {$locale}
   </div>
@@ -46,9 +46,9 @@
     {/if}
   </button>
   {#if openMenu}
-  <div transition:fly={{duration: 500, x:"200" }} class="absolute left-0 top-0 w-screen h-screen backdrop-blur flex flex-row justify-end">
-    <div class="bg-indigo-900 text-indigo-100 w-full md:w-1/3 p-8">
-      <section class="flex justify-between w-full">
+  <div transition:fly={{duration: 500, x:"100" }} class="absolute left-0 top-0 w-screen h-screen backdrop-blur flex flex-row justify-end">
+    <div class="bg-indigo-900 text-indigo-100 w-full md:w-1/3 p-4 md:p-8">
+      <section class="flex justify-between items-center w-full">
         <h1>SVELTE-TEST-4</h1>
         <button on:click={toggleMenu} class="">
           <Icon icon="bi:x" class="w-8 h-8"/>
@@ -56,10 +56,10 @@
       </section>
       <nav class="mt-8 flex flex-col gap-4">
         <ul class="flex flex-col gap-4">
-          <li>
+          <li class="cursor-pointer">
             <a href="/">{$t('menu.home')}</a>
           </li>
-          <li>
+          <li class="cursor-pointer">
             <a href="/">{$t('menu.page')}</a>
           </li>
         </ul>
