@@ -3,7 +3,15 @@
     "title": "Welcome to the Homepage",
     "head": "Homepage | SVELTE-TEST-4",
     "description": "TBD",
-    "text": "I want to drink {n, plural, =0 {no beers} one {one beer} other {a lot of beers!}}"
+    "beers": "Beers:",
+    "text-beers": "I want to drink {n, plural, =0 {no beers} one {one beer} other {a lot of beers!}}",
+    "acc-title-1": "This is the title",
+    "acc-title-2": "This is the title 2",
+    "acc-title-3": "This is the title 3",
+    "acc-item-1": "first item",
+    "acc-item-2": "second item",
+    "acc-item-3": "third item",
+    "acc-item-4": "fourth item"
   },
   "menu": {
     "home": "Homepage",

@@ -35,6 +35,9 @@ npm create svelte@latest svelte-test-4
 
 ## 1 - Accordion
 
+Accordion is a component based on [this](https://svelte.dev/repl/c109f83f3c114cb7829f04fe2440ef94?version=4.1.1) example. In order to apply Tailwind classes to the component, some modifications in the style have been made.
+
+
 ## Created 2023-07-25 | Modified 2023-07-27
 
 ## References:

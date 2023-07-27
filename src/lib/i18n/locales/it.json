@@ -3,7 +3,15 @@
     "title": "Benvenuti nella Homepage",
     "head": "Homepage | SVELTE-TEST-4",
     "description": "TBD",
-    "text": "Desidero bere {n, plural, =0 {nessuna birra} one {ona sola birra} other {un sacco di birre!}}"
+    "beers": "Birre:",
+    "text-beers": "Desidero bere {n, plural, =0 {nessuna birra} one {ona sola birra} other {un sacco di birre!}}",
+    "acc-title-1": "Titolo a scomparsa",
+    "acc-title-2": "Titolo a scomparsa 2",
+    "acc-title-3": "Titolo a scomparsa 3",
+    "acc-item-1": "primo item",
+    "acc-item-2": "secondo item",
+    "acc-item-3": "terzo item",
+    "acc-item-4": "quarto item"
   },
   "menu": {
     "home": "Homepage",
