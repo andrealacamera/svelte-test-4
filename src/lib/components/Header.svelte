@@ -46,7 +46,7 @@
     {/if}
   </button>
   {#if openMenu}
-  <div transition:fly={{duration: 500, x:"100" }} class="absolute left-0 top-0 w-screen h-screen backdrop-blur flex flex-row justify-end">
+  <div transition:fly={{duration: 500, x:"100" }} class="absolute left-0 top-0 w-full h-screen backdrop-blur flex flex-row justify-end">
     <div class="bg-indigo-900 text-indigo-100 w-full md:w-1/3 p-4 md:p-8">
       <section class="flex justify-between items-center w-full">
         <h1>SVELTE-TEST-4</h1>
