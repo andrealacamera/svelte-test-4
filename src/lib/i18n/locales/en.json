@@ -13,12 +13,30 @@
     "acc-item-3": "third item",
     "acc-item-4": "fourth item"
   },
+  "lab": {
+    "title": "Lab of IT",
+    "description": "This is the lab of IT" 
+  },
+  "pbd": {
+    "title": "Lab of PBD",
+    "description": "This is the lab of PBD" 
+  },
+  "rpg": {
+    "title": "Lab of RPG",
+    "description": "This is the lab of RPG" 
+  },
+  "other": {
+    "title": "Lab of OTHER",
+    "description": "This is the lab of OTHER" 
+  },
   "menu": {
     "home": "Homepage",
     "page": "The page"
   },
   "common": {
     "l_long": "Versione italiana",
-    "l_short": "🇮🇹 Italiano"
+    "l_short": "🇮🇹 Italiano",
+    "read_more": "Read more",
+    "generate": "Generate"
   }
 }

@@ -12,7 +12,7 @@
       "id": 0,
       "title": "lab.title",
       "text": "lab.description",
-      "button": "lab.read_more",
+      "button": "common.read_more",
       "img": "/img/alisa-anton-JhxGkGgd3Sw-unsplash.jpg",
       "url": "/"
     },
@@ -20,7 +20,7 @@
       "id": 1,
       "title": "pbd.title",
       "text": "pbd.description",
-      "button": "pbd.read_more",
+      "button": "common.read_more",
       "img": "/img/johannes-plenio-RwHv7LgeC7s-unsplash.jpg",
       "url": "/"
     },
@@ -28,7 +28,7 @@
       "id": 2,
       "title": "rpg.title",
       "text": "rpg.description",
-      "button": "rpg.generate",
+      "button": "common.generate",
       "img": "/img/lukasz-szmigiel-ps2daRcXYes-unsplash.jpg",
       "url": "/"
     },
@@ -36,7 +36,7 @@
       "id": 3,
       "title": "other.title",
       "text": "other.description",
-      "button": "other.generate",
+      "button": "common.read_more",
       "img": "/img/timothy-eberly-yuiJO6bvHi4-unsplash.jpg",
       "url": "/"
     } 
