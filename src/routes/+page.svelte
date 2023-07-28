@@ -10,10 +10,10 @@
   const data_carousel: Array<data_carousel> = [
     {
       "id": 0,
-      "title": "ramilab.title",
-      "text": "ramilab.description",
-      "button": "ramilab.read_more",
-      "img": "alisa-anton-JhxGkGgd3Sw-unsplash.jpg",
+      "title": "lab.title",
+      "text": "lab.description",
+      "button": "lab.read_more",
+      "img": "/img/alisa-anton-JhxGkGgd3Sw-unsplash.jpg",
       "url": "/"
     },
     {
@@ -21,7 +21,7 @@
       "title": "pbd.title",
       "text": "pbd.description",
       "button": "pbd.read_more",
-      "img": "johannes-plenio-RwHv7LgeC7s-unsplash.jpg",
+      "img": "/img/johannes-plenio-RwHv7LgeC7s-unsplash.jpg",
       "url": "/"
     },
     {
@@ -29,15 +29,15 @@
       "title": "rpg.title",
       "text": "rpg.description",
       "button": "rpg.generate",
-      "img": "lukasz-szmigiel-ps2daRcXYes-unsplash.jpg",
+      "img": "/img/lukasz-szmigiel-ps2daRcXYes-unsplash.jpg",
       "url": "/"
     },
     {
       "id": 3,
-      "title": "rpg.title",
-      "text": "rpg.description",
-      "button": "rpg.generate",
-      "img": "timothy-eberly-yuiJO6bvHi4-unsplash.jpg",
+      "title": "other.title",
+      "text": "other.description",
+      "button": "other.generate",
+      "img": "/img/timothy-eberly-yuiJO6bvHi4-unsplash.jpg",
       "url": "/"
     } 
   ];
