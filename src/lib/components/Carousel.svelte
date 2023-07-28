@@ -12,7 +12,25 @@
   let currentSlide: number = 0;
   let ffwd: boolean = true;
   let tt: number = 0;
+  let touchPosition: number | null = null ;
   // $: updateAnimation(currentSlide, false);
+
+  const handleTouchStart = (e: TouchEvent) => {
+    touchPosition = e.touches[0].clientX;
+  }
+  const handleTouchMove = (e: TouchEvent) => {
+    if (typeof touchPosition === "number") {
+      const diff = touchPosition - e.touches[0].clientX;
+      if (diff > 25 && touchPosition) {
+          nextSlide(true);
+          touchPosition = null;
+      }
+      if (diff < -25 && touchPosition) {
+          prevSlide();
+          touchPosition = null;
+      }
+    }
+   }
 
   const nextSlide = (reset: boolean = true) => {
     currentSlide = currentSlide < data.length-1 ? currentSlide+1 : 0
@@ -22,7 +40,7 @@
     }    
   }
 
-  const prevSlide = () => {
+  const prevSlide = (reset: boolean = true) => {
     currentSlide = currentSlide > 0 ? currentSlide-1 : data.length-1
     ffwd = false
     updateAnimation()
@@ -59,31 +77,33 @@
 
 
 <div class="flex flex-row justify-between items-center">
-  <button class="hidden md:flex opacity-50 p-2 cursor-pointer hover:opacity-100 text-indigo-700" on:click={prevSlide}>
+  <button class="hidden md:flex opacity-50 p-2 cursor-pointer hover:opacity-100 text-indigo-900" on:click={() => prevSlide()}>
     <Icon icon="bi:chevron-left" class="w-8 h-8" />
   </button>
   <div class="w-full h-72 overflow-hidden relative" id="slides">
     {#each data as d (d.id)}
     {#key currentSlide}
     <!-- <p>{d.id} | {d.title} | {d.text} | {d.button} | {d.url} | {d.img} </p> -->
-    <div id={`slide${d.id}`} class={`absolute top-0 left-0 h-full w-full ${currentSlide === d.id ? 'inline' : `hidden`}`} in:fly={{x: `${ffwd ? '100%' : '-100%'}`, duration: 750, easing: quintOut}} out:fade>
+    <div id={`slide${d.id}`} class={`absolute top-0 left-0 h-full w-full ${currentSlide === d.id ? 'inline' : `hidden`}`} in:fly={{x: `${ffwd ? '100%' : '-100%'}`, duration: 750, easing: quintOut}} out:fade on:touchstart={handleTouchStart} on:touchmove={handleTouchMove}>
       <div class="w-full h-full rounded-lg bg-cover bg-center" style={`background-image: url(${d.img})`}></div>
-      <div class='absolute inset-0 mx-8 my-4 p-2 bg-zinc-100/70 rounded-md text-indigo-900 backdrop-blur-sm flex flex-col items-center justify-around '>
+      <div class='absolute inset-0 mx-8 my-4 p-2 bg-indigo-100/50 rounded-md text-indigo-900 backdrop-blur-sm flex flex-col items-center justify-around '>
         <h2 class='text-2xl'>
           {$t(d.title)}
         </h2>
         <p class="line-clamp-3 text-center">
           {$t(d.text)}
         </p>
-        <a href={d.url} class=''>
-          {$t(d.button)} 
-        </a>
+        <button class="py-2 px-4 bg-indigo-900 text-indigo-100 rounded-md hover:scale-105">
+          <a href={d.url} class='' aria-label={`link to ${d.url}`}>
+            {$t(d.button)} 
+          </a>
+        </button>
       </div>
     </div>
     {/key}
     {/each}
   </div>
-  <button class="hidden md:flex opacity-50 p-2 cursor-pointer hover:opacity-100 text-indigo-700" on:click={() => nextSlide()}>
+  <button class="hidden md:flex opacity-50 p-2 cursor-pointer hover:opacity-100 text-indigo-900" on:click={() => nextSlide()}>
     <Icon icon="bi:chevron-right" class="w-8 h-8" />
   </button>
 </div>
