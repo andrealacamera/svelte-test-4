@@ -38,6 +38,16 @@ npm create svelte@latest svelte-test-4
 Accordion is a component based on [this](https://svelte.dev/repl/c109f83f3c114cb7829f04fe2440ef94?version=4.1.1) example. In order to apply Tailwind classes to the component, some modifications in the style have been made.
 
 
-## Created 2023-07-25 | Modified 2023-07-27
+## Created 2023-07-25 | Modified 2023-07-28
 
 ## References:
+
+## Photos credits: 
+- Photo by <a href="https://unsplash.com/@timothyeberly?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Timothy Eberly</a> on <a href="https://unsplash.com/wallpapers/nature/autumn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+- Photo by <a href="https://unsplash.com/@jplenio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Johannes Plenio</a> on <a href="https://unsplash.com/wallpapers/nature/autumn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+- Photo by <a href="https://unsplash.com/@alisaanton?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alisa Anton</a> on <a href="https://unsplash.com/wallpapers/nature/autumn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+- Photo by <a href="https://unsplash.com/@szmigieldesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lukasz Szmigiel</a> on <a href="https://unsplash.com/wallpapers/nature/autumn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
