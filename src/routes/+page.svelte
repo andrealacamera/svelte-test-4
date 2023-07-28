@@ -1,8 +1,47 @@
 <script lang="ts">
   import {t} from 'svelte-i18n'
   import Accordion from '$lib/components/Accordion.svelte';
+  import Carousel from '$lib/components/Carousel.svelte';
+
   let count: number = 0
   $: beers = Array(count).fill("🍺")
+
+  
+  const data_carousel: Array<data_carousel> = [
+    {
+      "id": 0,
+      "title": "ramilab.title",
+      "text": "ramilab.description",
+      "button": "ramilab.read_more",
+      "img": "alisa-anton-JhxGkGgd3Sw-unsplash.jpg",
+      "url": "/"
+    },
+    {
+      "id": 1,
+      "title": "pbd.title",
+      "text": "pbd.description",
+      "button": "pbd.read_more",
+      "img": "johannes-plenio-RwHv7LgeC7s-unsplash.jpg",
+      "url": "/"
+    },
+    {
+      "id": 2,
+      "title": "rpg.title",
+      "text": "rpg.description",
+      "button": "rpg.generate",
+      "img": "lukasz-szmigiel-ps2daRcXYes-unsplash.jpg",
+      "url": "/"
+    },
+    {
+      "id": 3,
+      "title": "rpg.title",
+      "text": "rpg.description",
+      "button": "rpg.generate",
+      "img": "timothy-eberly-yuiJO6bvHi4-unsplash.jpg",
+      "url": "/"
+    } 
+  ];
+
 </script>
 
 <svelte:head>
@@ -48,3 +87,6 @@
     </ul>
   </div>
 </Accordion>
+
+
+<Carousel data={data_carousel} />
