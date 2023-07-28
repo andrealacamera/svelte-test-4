@@ -1,7 +1,8 @@
 <script lang="ts">
   import Icon from "@iconify/svelte";
   import { onMount } from "svelte";
-  import { fade, slide, fly } from "svelte/transition";
+  import { fade, fly } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
   import { t } from 'svelte-i18n';
 
   export let data: Array<data_carousel> 
@@ -42,7 +43,7 @@
     tt = setInterval( () => {
       nextSlide(false);
     }, duration)
-    console.log(currentSlide, tt)
+    // console.log(currentSlide, tt)
   }
 
   onMount( () => {
@@ -65,7 +66,7 @@
     {#each data as d (d.id)}
     {#key currentSlide}
     <!-- <p>{d.id} | {d.title} | {d.text} | {d.button} | {d.url} | {d.img} </p> -->
-    <div id={`slide${d.id}`} class={`absolute top-0 left-0 h-full w-full ${currentSlide === d.id ? 'inline' : `hidden`}`} in:fly={{x: `${ffwd ? '100%' : '-100%'}`}} out:fade>
+    <div id={`slide${d.id}`} class={`absolute top-0 left-0 h-full w-full ${currentSlide === d.id ? 'inline' : `hidden`}`} in:fly={{x: `${ffwd ? '100%' : '-100%'}`, duration: 750, easing: quintOut}} out:fade>
       <div class="w-full h-full rounded-lg bg-cover bg-center" style={`background-image: url(${d.img})`}></div>
       <div class='absolute inset-0 mx-8 my-4 p-2 bg-zinc-100/70 rounded-md text-indigo-900 backdrop-blur-sm flex flex-col items-center justify-around '>
         <h2 class='text-2xl'>
@@ -86,11 +87,8 @@
     <Icon icon="bi:chevron-right" class="w-8 h-8" />
   </button>
 </div>
-<div class="flex justify-center items-center gap-2 mt-4 z-1">
+<div class="flex justify-center items-center gap-2 mt-4 z-1 mb-2">
   {#each data as d}
     <button class={`w-2 h-2 rounded-full ${currentSlide === d.id ? 'bg-indigo-700' : 'bg-indigo-200'}`} on:click={() => setSlide(d.id)}></button>
   {/each}
 </div>
-{duration}
-{currentSlide}
-{ffwd} {tt}
