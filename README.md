@@ -37,6 +37,14 @@ npm create svelte@latest svelte-test-4
 
 Accordion is a component based on [this](https://svelte.dev/repl/c109f83f3c114cb7829f04fe2440ef94?version=4.1.1) example. In order to apply Tailwind classes to the component, some modifications in the style have been made.
 
+## 2 - Carousel
+
+Carousel is a component based on my previous version (made in React). Several modifications have been made:
+- added Svelte transition (better than previous based on tailwind classes)
+- added []`{#key currentSlide}`](https://svelte.dev/docs/logic-blocks#key) within the `{#each}` block. Without it, transition will not work 🤔  
+- by clicking on either direction buttons or small circles placed below the slide, the `setInterval` is reset. After that the _normal_ count continues.
+- Fade in: fly | Fade out: fade. (TBD: add prop to choose transistions?)
+
 
 ## Created 2023-07-25 | Modified 2023-07-28
 
