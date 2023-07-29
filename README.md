@@ -45,8 +45,17 @@ Carousel is a component based on my previous version (made in React). Several mo
 - by clicking on either direction buttons or small circles placed below the slide, the `setInterval` is reset. After that the _normal_ count continues.
 - Fade in: fly | Fade out: fade. (TBD: add prop to choose transistions?)
 
+## 3 - Back-To-Top 
 
-## Created 2023-07-25 | Modified 2023-07-28
+Based on [`<svelte:window>`](https://svelte.dev/docs/special-elements#svelte-window) special element, binding the scroll value to `y` variable. The component is visible if `y>50`. Transition `fly`. JS function to scroll (`smooth` behaviour is nice!):
+```js
+const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+```  
+
+
+## Created 2023-07-25 | Modified 2023-07-29
 
 ## References:
 
