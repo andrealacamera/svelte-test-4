@@ -47,7 +47,7 @@ Carousel is a component based on my previous version (made in React). Several mo
 
 ## 3 - Back-To-Top 
 
-Based on [`<svelte:window>`](https://svelte.dev/docs/special-elements#svelte-window) special element, binding the scroll value to `y` variable. The component is visible if `y>50`. Transition `fly`. JS function to scroll (`smooth` behaviour is nice!):
+Based on [`<svelte:window>`](https://svelte.dev/docs/special-elements#svelte-window) special element, binding the scrollY value to the `y` variable. The component is visible if `y > 50`(px). Transition with `fly`. JS function to scroll (`smooth` behaviour is nice!):
 ```js
 const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
