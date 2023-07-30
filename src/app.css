@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("/fonts/Exo2-VariableFont_wght.ttf");
+}
