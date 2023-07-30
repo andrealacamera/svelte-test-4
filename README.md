@@ -14,8 +14,14 @@ npm create svelte@latest svelte-test-4
 
 - [Google Font: Exo 2](https://fonts.google.com/specimen/Exo+2?query=exo+2)
 
-  1. Open `app.css` and add on the top of the code the `@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');` command suggested by Google Font page.
-  2. Modify the `tailwind.config.js` extending the `fontFamily`: 
+  1. Open `app.css` and ~~add on the top of the code the `@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');` command suggested by Google Font page.~~  add to the bottom (adjust path to downloaded file):
+  ```css
+  @font-face {
+    font-family: "Exo 2";
+    src: url("/fonts/Exo2-VariableFont_wght.ttf");
+  }
+  ```
+  2. Modify the `tailwind.config.js` extending the `fontFamily` (escape the white space with extra quotes): 
   ```js
   extend: {
       fontFamily: {
