@@ -12,11 +12,14 @@
   }
 
   const toggleLocale = ():void => {
+    let loc: string;
     if ($locale === 'it') {
-      locale.set('en')
+      loc = 'en'
     } else {
-      locale.set('it')
+      loc = 'it'
     }
+    $locale = loc
+    localStorage.setItem("__myLanguage", loc)
   }
 </script>
 
