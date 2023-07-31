@@ -107,7 +107,7 @@
     <Icon icon="bi:chevron-right" class="w-8 h-8" />
   </button>
 </div>
-<div class="flex justify-center items-center gap-2 mt-4 z-1 mb-2">
+<div class="flex justify-center items-center gap-2 mt-4 mb-2">
   {#each data as d}
     <button class={`w-2 h-2 rounded-full ${currentSlide === d.id ? 'bg-indigo-700' : 'bg-indigo-200'}`} on:click={() => setSlide(d.id)}></button>
   {/each}
