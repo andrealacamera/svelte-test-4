@@ -37,7 +37,8 @@ npm create svelte@latest svelte-test-4
   4. Add `/src/routes/+layout.ts` with initialization
   5. Use `$format`, `$_`, or `$t` in pages. See [message syntax](https://formatjs.io/docs/core-concepts/icu-syntax).
 
-- [Iconify](https://iconify.design/) 
+- [Iconify](https://iconify.design/). Check available icons [here](https://icon-sets.iconify.design/bi/)
+
 
 ## 1 - Accordion
 
