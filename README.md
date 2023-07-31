@@ -66,7 +66,7 @@ A banner that appears if no cookie has been previously set. When click ok button
 
 > Disclaimer. Do not use for any privacy law or other legal things! This is just an example for the management of cookies (more precisely: technical cookies).
 
-## Created 2023-07-25 | Modified 2023-07-29
+## Created 2023-07-25 | Modified 2023-07-31
 
 ## References:
 

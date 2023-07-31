@@ -1,24 +1,24 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { beforeUpdate } from "svelte";
 
-  let cookieset: boolean = false;
+  let showBanner: boolean = false;
 
   const COOKIE = '__myCookie';
   const DURATION = 60*60*24*30;
 
   const handleCookie = () => {
     document.cookie=`${COOKIE}=1; max-age=${DURATION}; samesite=strict;`;
-    cookieset = true
+    showBanner = false
     window.location.reload();
   }
 
-  onMount( () => {  
-    cookieset = document.cookie.split(';').some((item) => item.includes(`${COOKIE}=1`)) ? true : false;
-    console.log(document.cookie, cookieset)
+  beforeUpdate( () => {  
+    showBanner = document.cookie.split(';').some((item) => item.includes(`${COOKIE}=1`)) ? false : true;
+    console.log(document.cookie, showBanner)
   })
 </script>
 
-{#if !cookieset}
+{#if showBanner}
 <div class="w-full fixed bottom-0 left-0 bg-indigo-900 text-indigo-100 z-50 p-2">
   <div class="flex flex-col justify-center items-center">
     <h1 class="text-2xl">COOKIE POLICY</h1>
@@ -26,5 +26,4 @@
     <button on:click={handleCookie} class="border border-indigo-100 py-2 px-4 rounded-lg">OK</button>
   </div>
 </div>
-  
 {/if}
