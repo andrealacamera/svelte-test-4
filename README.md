@@ -60,6 +60,11 @@ const scrollToTop = () => {
   }
 ```  
 
+## 4 - Cookie policy
+
+A banner that appears if no cookie has been previously set. When click ok button, a cookie is saved on the browser. (TBD: Replace the text with anything better!)
+
+> Disclaimer. Do not use for any privacy law or other legal things! This is just an example for the management of cookies (more precisely: technical cookies).
 
 ## Created 2023-07-25 | Modified 2023-07-29
 
