@@ -7,11 +7,7 @@
 </script>
 <svelte:head>
   <script>
-    console.log("+LAYOUT.SVELTE <svelte:head> says hello!")
-  </script>
-  <script>
     function changeTheme(e) {
-      console.log("THEME CHANGES...", e, !('theme' in localStorage));
       window.location.reload();
     }
 
