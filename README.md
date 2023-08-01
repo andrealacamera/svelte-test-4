@@ -67,7 +67,13 @@ A banner that appears if no cookie has been previously set. When click ok button
 
 > Disclaimer. Do not use for any privacy law or other legal things! This is just an example for the management of cookies (more precisely: technical cookies).
 
-## Created 2023-07-25 | Modified 2023-07-31
+## 5 - Dark theme
+
+New feature on the header. Following [Tailwind documentation](), and [this stackoverflow](https://stackoverflow.com/questions/59621784/how-to-detect-prefers-color-scheme-change-in-javascript), a "light", "dark", "system" (i.e. operating system) theme selector has been added. In order to avoid [FOUC](https://en.wikipedia.org/wiki/Flash_of_unstyled_content), inline script has been added to the `app.html` (TBD: can be done within a `<svelte:head>` element?). Added event-listeners (in the same script) to manage automatic change of theme by the OS. 
+
+> **Reload is mandatory to apply the change** For this reason the reload is performed only if no theme is selected on the localStorage (to avoid unnecessary and annoying reload of the page).
+
+## Created 2023-07-25 | Modified 2023-08-01
 
 ## References:
 

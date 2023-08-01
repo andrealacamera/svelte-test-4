@@ -49,18 +49,18 @@
 </svelte:head>
 
 
-<h1 class="text-4xl text-indigo-600">{$t('home.title')}</h1>
+<h1 class="text-4xl text-indigo-900 dark:text-indigo-100">{$t('home.title')}</h1>
 
-<section class="my-16 border border-indigo-900 rounded-xl p-2">
+<section class="my-16 border border-indigo-900 dark:border-indigo-100 rounded-xl p-2">
   <span class='py-2 px-4'> {$t('home.beers')}</span>
-  <button class="border bg-indigo-950 text-indigo-100 px-4 py-2 rounded" on:click={() => count<10?count++:10}>+</button>
-  <button class="border bg-indigo-950 text-indigo-100 px-4 py-2 rounded" on:click={() => count>0?count--:0}>-</button>
+  <button class="border bg-indigo-900 text-indigo-100 dark:bg-indigo-100 dark:text-indigo-900 px-4 py-2 rounded" on:click={() => count<10?count++:10}>+</button>
+  <button class="border bg-indigo-900 text-indigo-100 dark:bg-indigo-100 dark:text-indigo-900 px-4 py-2 rounded" on:click={() => count>0?count--:0}>-</button>
   <div class="w-full">
     {#each beers as b}
       <span class="px-1">{b}</span>    
     {/each}
   </div>
-  <p class="bg-indigo-300 p-2 my-2">{$t('home.text-beers', {values: {n:count}})}</p>
+  <p class="bg-indigo-300 dark:bg-indigo-700 p-2 my-2">{$t('home.text-beers', {values: {n:count}})}</p>
   
 </section>
 

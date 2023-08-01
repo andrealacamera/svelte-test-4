@@ -14,7 +14,7 @@
 
 {#if visible}
 <div class="fixed bottom-2 right-2" transition:fly={{x:'100%'}}>
-  <button on:click={scrollToTop} class="p-4 rounded-xl bg-indigo-900 text-indigo-200 hover:text-indigo-50">
+  <button on:click={scrollToTop} class="p-4 rounded-xl bg-indigo-900 text-indigo-200 dark:bg-indigo-100 dark:text-indigo-900 hover:text-indigo-50">
     <Icon icon="bi:chevron-double-up" class="w-6 h-6" />
   </button>
 </div>

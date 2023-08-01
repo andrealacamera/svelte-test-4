@@ -77,7 +77,7 @@
 
 
 <div class="flex flex-row justify-between items-center">
-  <button class="hidden md:flex opacity-50 p-2 cursor-pointer hover:opacity-100 text-indigo-900" on:click={() => prevSlide()}>
+  <button class="hidden md:flex opacity-50 p-2 cursor-pointer hover:opacity-100 text-indigo-900 dark:text-indigo-100" on:click={() => prevSlide()}>
     <Icon icon="bi:chevron-left" class="w-8 h-8" />
   </button>
   <div class="w-full h-72 overflow-hidden relative" id="slides">
@@ -103,12 +103,12 @@
     {/key}
     {/each}
   </div>
-  <button class="hidden md:flex opacity-50 p-2 cursor-pointer hover:opacity-100 text-indigo-900" on:click={() => nextSlide()}>
+  <button class="hidden md:flex opacity-50 p-2 cursor-pointer hover:opacity-100 text-indigo-900 dark:text-indigo-100" on:click={() => nextSlide()}>
     <Icon icon="bi:chevron-right" class="w-8 h-8" />
   </button>
 </div>
 <div class="flex justify-center items-center gap-2 mt-4 mb-2">
   {#each data as d}
-    <button class={`w-2 h-2 rounded-full ${currentSlide === d.id ? 'bg-indigo-700' : 'bg-indigo-200'}`} on:click={() => setSlide(d.id)}></button>
+    <button class={`w-2 h-2 rounded-full ${currentSlide === d.id ? 'bg-indigo-700 dark:bg-indigo-600' : 'bg-indigo-200'}`} on:click={() => setSlide(d.id)}></button>
   {/each}
 </div>
