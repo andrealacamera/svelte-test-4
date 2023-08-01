@@ -70,8 +70,8 @@
         </button>
       </li>
     </ul>
-    <div class="relative">
-      <button class="w-6 h-6" on:click={() => {openTheme = !openTheme}}>
+    <div class="relative h-6">
+      <button class="" on:click={() => {openTheme = !openTheme}}>
         {#if darkTheme === 0 }
         <Icon icon="bi:sun-fill" class="text-indigo-900 dark:text-indigo-100 w-6 h-6" />
         {:else if darkTheme === 1 }
@@ -81,17 +81,17 @@
         {/if}
       </button>
       {#if openTheme}
-      <div class="absolute top-12 left-0 border border-indigo-900 dark:border-indigo-100 rounded-xl py-1 z-10 bg-indigo-100 dark:bg-indigo-900 text-indigo-900 dark:text-indigo-100">
+      <div class="absolute top-12 left-0 border border-indigo-900 dark:border-indigo-100 rounded-xl p-1 z-10 bg-indigo-100 dark:bg-indigo-900 text-indigo-900 dark:text-indigo-100">
         <div class="flex flex-col gap-2  w-full ">
-          <button class="flex flex-row gap-4 items-center hover:bg-indigo-200 dark:hover:bg-indigo-700 px-4 py-2 rounded" on:click={ () => {changeTheme(0)}}>
+          <button class="flex flex-row gap-4 items-center hover:bg-indigo-200 dark:hover:bg-indigo-700 px-4 py-2 rounded-md" on:click={ () => {changeTheme(0)}}>
             <Icon icon="bi:sun-fill" class="w-6 h-6" />
             Light
           </button>
-          <button class="flex flex-row gap-4 items-center hover:bg-indigo-200 dark:hover:bg-indigo-700 px-4 py-2 rounded" on:click={ () => {changeTheme(1)}}>
+          <button class="flex flex-row gap-4 items-center hover:bg-indigo-200 dark:hover:bg-indigo-700 px-4 py-2 rounded-md" on:click={ () => {changeTheme(1)}}>
             <Icon icon="bi:moon-fill" class="w-6 h-6" />
             Dark
           </button>
-          <button class="flex flex-row gap-4 items-center hover:bg-indigo-200 dark:hover:bg-indigo-700 px-4 py-2 rounded" on:click={ () => {changeTheme(-1)}}>
+          <button class="flex flex-row gap-4 items-center hover:bg-indigo-200 dark:hover:bg-indigo-700 px-4 py-2 rounded-md" on:click={ () => {changeTheme(-1)}}>
             <Icon icon="bi:gear-wide-connected" class="w-6 h-6" />
             System
           </button>
@@ -123,13 +123,29 @@
           <li class="cursor-pointer">
             <a href="/">{$t('menu.page')}</a>
           </li>
+          <li>
+            <button class="" on:click={toggleLocale} >
+              {$t('common.l_long')}
+            </button>
+          </li>
+          <li>
+            Theme:
+            <div class="flex flex-row justify-around ">
+              <button class="flex flex-row gap-4 items-center hover:bg-indigo-200 dark:hover:bg-indigo-700 px-4 py-2 rounded-md text-small" on:click={ () => {changeTheme(0)}}>
+                <Icon icon="bi:sun-fill" class="w-4 h-4" />
+                Light
+              </button>
+              <button class="flex flex-row gap-4 items-center hover:bg-indigo-200 dark:hover:bg-indigo-700 px-4 py-2 rounded-md text-small" on:click={ () => {changeTheme(1)}}>
+                <Icon icon="bi:moon-fill" class="w-4 h-4" />
+                Dark
+              </button>
+              <button class="flex flex-row gap-4 items-center hover:bg-indigo-200 dark:hover:bg-indigo-700 px-4 py-2 rounded-md text-small" on:click={ () => {changeTheme(-1)}}>
+                <Icon icon="bi:gear-wide-connected" class="w-4 h-4" />
+                System
+              </button>
+            </div>
+          </li>
         </ul>
-        <div>
-          <button class="" on:click={toggleLocale} >
-            {$t('common.l_long')}
-          </button>
-        </div>
-    
       </nav>
     </div>
   
