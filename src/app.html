@@ -4,33 +4,6 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
-		<script>
-			function changeTheme(e) {
-				console.log("THEME CHANGES...", e, !('theme' in localStorage));
-				window.location.reload();
-			}
-
-			localStorage.theme === 'dark' ||
-			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-				? document.documentElement.classList.add('dark')
-				: document.documentElement.classList.remove('dark');
-			
-			const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
-			const lightModePreference= window.matchMedia("(prefers-color-scheme: light)");
-
-			darkModePreference.addEventListener("change", (e) => {
-				if (e.matches && !('theme' in localStorage)) {
-					changeTheme(1);
-				}
-			});
-			lightModePreference.addEventListener("change", (e) => {
-				if (e.matches && !('theme' in localStorage)) {
-					changeTheme(0);
-				}
-			}
-			);
-
-		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
