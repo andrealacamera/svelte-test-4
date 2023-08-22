@@ -75,7 +75,7 @@ New feature on the header. Following [Tailwind documentation](), and [this stack
 
 ## 6 - Animation and other stuff | AnimeJS
 
- - Installed [AnimeJS]() with `npm install animejs --save`. Install also [typescript support](https://www.npmjs.com/package/@types/animejs)  `npm install --save @types/animejs`. Animation of the homepage title (with timeline). More examples on the [documentation](https://animejs.com/documentation/)
+ - Installed [AnimeJS](https://animejs.com) with `npm install animejs --save`. Install also [typescript support](https://www.npmjs.com/package/@types/animejs)  `npm install --save @types/animejs`. Animation of the homepage title (with timeline). More examples on the [documentation](https://animejs.com/documentation/)
 
 
 ## Created 2023-07-25 | Modified 2023-08-02
